@@ -1,0 +1,51 @@
+<div class="errors_data">
+    {{#each errors}}
+    <div class="text-danger">{{text}}</div>
+    {{else}}
+    {{/each}}
+</div>
+
+
+
+
+<div class="container addprofileblock">
+    <h1 class="text-success">Add profile</h1>
+
+    <form method="POST" action="/profiles/addprofile" enctype="multipart/form-data">
+        <div class="row">
+            <div class="form-group">
+                <label for="photo">Upload Photos</label>
+                <input type="file" name="photo" class="form-control mb-2" id="photo" placeholder="Upload your photo">
+            </div>
+
+            <div class="form-group">
+                <label for="first name">First Name</label>
+                <input type="text" name="firstname" class="form-control mb-2" placeholder="First Name" id="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" class="form-control mb-2" placeholder="Last Name" id="lastname">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="email" name="email" class="form-control mb-2" placeholder="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="phonenumber">phone Number</label>
+                <input type="text" name="phonenumber" class="form-control mb-2" placeholder="phone number"
+                    id="phonenumber">
+            </div>
+            <div class="form-group">
+                <label for="loaction">Location</label>
+                <input type="text" name="location" class="form-control mb-2" placeholder="location" id="location">
+            </div>
+            <div class="form-group clearfix mt-3 buttonblock">
+                <button class="btn btn-success float-right button">Add profile</button>
+            </div>
+
+        </div>
+    </form>
+</div>

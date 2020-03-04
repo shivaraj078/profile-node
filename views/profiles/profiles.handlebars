@@ -1,0 +1,23 @@
+<div class="container profileblock mt-4">
+    {{#each profile}}
+    <div class="card" style="width: 18rem;">
+        <img src="{{trimArray photo.0.path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title text-center text-success">{{firstname}}</h5>
+            <h6 class="card-text text-center text-success">{{lastname}}</h6>
+            <h6 class="card-text text-warning">{{email}}</h6>
+            <h6 class="card-text">{{phonenumber}}</h6>
+            <h6 class="card-text">{{location}}</h6>
+            <a href="../profiles/addprofile" class="btn btn-primary">Add another user</a>
+            <a href="../profiles/editprofile/{{id}}" class="btn btn-success">Edit Profile</a>
+            <form action="../profiles/deleteprofile/{{profile.id}}/?_method=DELETE" method="POST" class="mt-2">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="delete" class="btn btn-danger btn-block">
+            </form>
+        </div>
+    </div>
+
+    {{else}}
+    <h1>not found</h1>
+    {{/each}}
+</div>

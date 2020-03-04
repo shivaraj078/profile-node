@@ -1,0 +1,28 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #eee;
+}
+
+.addprofileblock {
+  padding: 65px !important;
+  margin: 30px 0 0 0 auto;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.addprofileblock .buttonblock {
+  display: block;
+  float: right !important;
+  width: 100%;
+  margin: 15px 15px;
+}
+
+.profileblock {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.card {
+  width: 19%;
+}
